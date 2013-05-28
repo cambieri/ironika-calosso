@@ -95,16 +95,19 @@ a {
 	line-height: 50px;
 	font-weight: bold;
 	font-family: Georgia, "Times New Roman", Times, serif;
+	text-shadow: 0 0 0.2em #333, 0 0 0.2em #333, 0 0 0.2em #333
 }
 .slogan.small {
 	top: 75%;
 	font-size: 14px;
 	line-height: 14px;
+	text-shadow: 0 0 3.4em #333, 0 0 5.4em #333
 }
 .slogan.prezzo {
 	top: 83%;
 	color: #21325E;
 	font-size: 20px;
+	text-shadow: 0 0 0.2em #ddd, 0 0 0.2em #ddd
 }
 .titolo-sezione {
 	position: absolute;
@@ -115,6 +118,7 @@ a {
 	line-height: 40px;
 	font-weight: bold;
 	font-family: Georgia, "Times New Roman", Times, serif;
+	text-shadow: 0 0 0.2em #333, 0 0 0.2em #333, 0 0 0.2em #333
 }
 
 .vedi-big {
