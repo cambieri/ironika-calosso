@@ -2,6 +2,61 @@
 
 body {
 	/* background-color: black; */
-	padding-top: 40px;
-	padding-bottom: 40px;
+	/* padding-top: 40px; */
+	/* padding-bottom: 40px; */
+	font-size: 12px;
+}
+
+header {
+	background-color: white;
+	color: #333;
+	text-align: center;
+	font-size: 14px;
+	line-height: 42px;
+}
+
+footer {
+	background-color: #21325E;
+	color: #DDD;
+	text-align: center;
+	font-size: 10px;
+	line-height: 24px;
+}
+
+.content {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.title {
+	margin-top: 2%;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.blue_top {
+	background-color: #21325E;
+	height: 16px;
+}
+
+.center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav {
+	font-family: 'Wire One', sans-serif;
+	font-size: 28px;
+}
+.nav-tabs>li>a, .nav-pills>li>a {
+	margin-right: 16px;
+}
+.nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus {
+	background-color: #21325E;
+}
+
+a {
+	color: #21325E;
 }

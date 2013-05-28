@@ -1,6 +1,54 @@
 {% extends "site_base.html" %}
 {% load i18n %}
 
+{% block css %}
+{{ block.super }}
+		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+		
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+{% endblock %}
+
 {% block markup %}
-    <h1>{% trans "Hello Chuck!" %}</h1>
+		<div class="container">
+			<header>
+				<div class="row"><div class="span12 blue_top"></div></div>
+				<div class="row">
+					<div class="span1 offset9">
+						<a href=""><img src="{{ STATIC_URL }}img/fb.png"></a>
+					</div>
+					<div class="span1">
+						<a href=""><img src="{{ STATIC_URL }}img/yt.png"></a>
+					</div>
+					<div class="span1">
+						<a href=""><img src="{{ STATIC_URL }}img/inst.png"></a>
+					</div>
+				</div>
+				<img src="{{ STATIC_URL }}img/logo.png" style="margin: 20px 0 100px 0;"/>
+				<div class="row">
+					<div class="span12">
+						<ul class="nav nav-pills" style="display: inline-block;">
+							<li class="active"><a href="#">chi siamo</a></li>
+							<li><a href="#">contatti</a></li>
+							<li><a href="#">cucina</a></li>
+							<li><a href="#">living</a></li>
+							<li><a href="#">notte</a></li>
+							<li><a href="#">outlet</a></li>
+							<li><a href="#">boiseries</a></li>
+							<li><a href="#">classico</a></li>
+							<li><a href="#">snaidero</a></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<div class="content">
+					{% block inner_markup %}
+					{% endblock %}
+			</div>
+			<footer>
+				© 2013 [azienda] - TEL. +39 0123 456789 - P.IVA 0123456789 - Via Tal De Tali, 1 - 12345 [città] (prov) - [email]
+			</footer>
+		</div> <!-- /container -->
 {% endblock %}
