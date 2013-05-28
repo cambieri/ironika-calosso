@@ -24,8 +24,8 @@ footer {
 }
 
 .content {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .title {
@@ -54,9 +54,28 @@ footer {
 	margin-right: 16px;
 }
 .nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus {
-	background-color: #21325E;
+	/* background-color: #21325E; */
+	background-color: #fff;
+	color: #777;
 }
-
+.nav > li > a:hover,
+.nav > li > a:focus {
+	text-decoration: none;
+	background-color: #fff;
+	color: #777;
+}
 a {
 	color: #21325E;
+}
+
+.canvas {
+	border: 15px white solid;
+	box-shadow: 0px 0px 50px 10px rgba(213, 213, 213, .6);
+	margin-bottom: 30px;
+}
+.canvas.big {
+	height: 600px;
+}
+.canvas.small {
+	height: 400px;
 }
