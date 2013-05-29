@@ -27,14 +27,14 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="span4 offset4"><img src="{{ STATIC_URL }}img/logo.png" style="margin: 10% 0 20% 0;"/></div>
+					<div class="span4 offset4"><a href="/"><img src="{{ STATIC_URL }}img/logo.png" style="margin: 10% 0 20% 0;"/></a></div>
 				</div>
 				<div class="row">
 					<div class="span12">
 						<ul class="nav nav-pills" style="display: inline-block;">
-							<li class="active"><a href="#">chi siamo</a></li>
+							<li {% ifequal sezione "chi_siamo" %}class="active"{% endifequal %}><a href="/chi_siamo">chi siamo</a></li>
 							<li><a href="#">contatti</a></li>
-							<li><a href="#">cucina</a></li>
+							<li {% ifequal sezione "cucina" %}class="active"{% endifequal %}><a href="/cucina">cucina</a></li>
 							<li><a href="#">living</a></li>
 							<li><a href="#">notte</a></li>
 							<li><a href="#">outlet</a></li>

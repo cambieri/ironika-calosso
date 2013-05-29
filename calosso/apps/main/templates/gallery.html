@@ -1,0 +1,66 @@
+{% extends "subsite.html" %}
+{% load i18n %}
+
+
+{# This is the page title #}
+{% block title %}calosso{% endblock %}
+
+
+{# Content of the page #}
+{% block inner_markup %}
+					<div class="row">
+						<div class="span12">
+							<div class="canvas big">
+								<img alt="Cucine" src="{{ STATIC_URL }}img/cucina/ola.jpg" width="100%">
+								<div class="gallery-descrizione">Cucina Ola: 25.000 euro - design Pininfarina</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span4">
+							<div class="canvas small">
+								<img alt="Boiserie" src="{{ STATIC_URL }}img/boiseries/piccole/elegante_boiserie_decape_su_misura.jpg">
+								<div class="titolo-sezione">LA BOISERIE</div>
+								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="canvas small">
+								<img alt="Zona Giorno" src="{{ STATIC_URL }}img/living/piccole/camilla_dondolo.jpg">
+								<div class="titolo-sezione">DOIMO</div>
+								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="canvas small">
+								<img alt="Sedute" src="{{ STATIC_URL }}img/living/sedie/piccole/Congress_cs1246_col_back1.jpg">
+								<div class="titolo-sezione">CALLIGARIS</div>
+								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span4">
+							<div class="canvas small">
+								<img alt="Tavoli e Soggiorni" src="{{ STATIC_URL }}img/living/tavoli/piccole/cs353_cs274_P128_cs8019.jpg">
+								<div class="titolo-sezione">TONIN</div>
+								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="canvas small">
+								<img alt="Zona Notte" src="{{ STATIC_URL }}img/notte/piccole/andromeda_laccato_tortora.jpg">
+								<div class="titolo-sezione">ZONA NOTTE</div>
+								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="canvas small">
+								<img alt="Cucine Classiche" src="{{ STATIC_URL }}img/snaidero/piccole/Snaidero_Idea.jpg">
+								<div class="titolo-sezione">CUCINE CLASSICHE</div>
+								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+							</div>
+						</div>
+					</div>
+{% endblock %}
+{# end of content #}

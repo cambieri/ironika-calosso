@@ -3,7 +3,7 @@
 body {
 	/* background-color: black; */
 	/* padding-top: 40px; */
-	/* padding-bottom: 40px; */
+	padding-bottom: 20px;
 	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
 	font-size: 12px;
 }
@@ -130,6 +130,22 @@ a {
 	position: absolute;
 	left: 30%;
 	bottom: 4%;
+}
+
+.gallery-descrizione {
+	background: rgba(225, 225, 225, .8);
+	position: absolute;
+	height: 20%;
+	bottom: 0;
+}
+
+.chi_siamo {
+	font-family: 'Wire One', sans-serif;
+	font-size: 40px;
+	line-height: 48px;
+	color: #777;
+	text-align: justify;
+	margin-top: 20px;
 }
 
 /* Large desktop */
