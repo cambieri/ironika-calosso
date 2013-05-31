@@ -10,12 +10,12 @@
 {% block inner_markup %}
 					<div class="row">
 						<div class="span12">
-							<div class="canvas big">
+							<div class="canvas big" onclick="window.location.href = '/cucina'">
 								<img alt="Cucine" src="{{ STATIC_URL }}img/cucina/ola.jpg" width="100%">
 								<div class="slogan main">SCOPRI<br>LE NUOVE<br>CUCINE 2013</div>
 								<div class="slogan small">Ecco lo stile, l'eleganza e la personalità delle nuove cucine Snaidero<br>in esposizione presso il nostro showroom.</div>
 								<div class="slogan prezzo">Cucina Ola:<br>20.000€</div>
-								<div class="vedi-big"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione_big.jpg"></div>
+								<div class="vedi-big"><img class="vedi-big-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione_big.jpg"></div>
 							</div>
 						</div>
 					</div>
@@ -23,22 +23,31 @@
 						<div class="span4">
 							<div class="canvas small">
 								<img alt="Boiserie" src="{{ STATIC_URL }}img/boiseries/piccole/elegante_boiserie_decape_su_misura.jpg">
-								<div class="titolo-sezione">LA BOISERIE</div>
-								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+								<div class="testo-sezione">
+									<div class="slogan-sezione"><em>Madames et Monsieurs,</em></div>
+									<div class="titolo-sezione">LA BOISERIE</div>
+								</div>
+								<div class="vedi-small"><img class="vedi-small-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
 							</div>
 						</div>
 						<div class="span4">
 							<div class="canvas small">
 								<img alt="Zona Giorno" src="{{ STATIC_URL }}img/living/piccole/camilla_dondolo.jpg">
-								<div class="titolo-sezione">DOIMO</div>
-								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+								<div class="testo-sezione">
+									<div class="slogan-sezione">ZONA GIORNO<br>E SOGGIORNI</div>
+									<div class="titolo-sezione">DOIMO</div>
+								</div>
+								<div class="vedi-small"><img class="vedi-small-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
 							</div>
 						</div>
 						<div class="span4">
 							<div class="canvas small">
 								<img alt="Sedute" src="{{ STATIC_URL }}img/living/sedie/piccole/Congress_cs1246_col_back1.jpg">
-								<div class="titolo-sezione">CALLIGARIS</div>
-								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+								<div class="testo-sezione">
+									<div class="slogan-sezione">SEDUTE</div>
+									<div class="titolo-sezione">CALLIGARIS</div>
+								</div>
+								<div class="vedi-small"><img class="vedi-small-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
 							</div>
 						</div>
 					</div>
@@ -46,22 +55,29 @@
 						<div class="span4">
 							<div class="canvas small">
 								<img alt="Tavoli e Soggiorni" src="{{ STATIC_URL }}img/living/tavoli/piccole/cs353_cs274_P128_cs8019.jpg">
-								<div class="titolo-sezione">TONIN</div>
-								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+								<div class="testo-sezione">
+									<div class="slogan-sezione">TAVOLI E SOGGIORNI</div>
+									<div class="titolo-sezione">TONIN</div>
+								</div>
+								<div class="vedi-small"><img class="vedi-small-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
 							</div>
 						</div>
 						<div class="span4">
 							<div class="canvas small">
 								<img alt="Zona Notte" src="{{ STATIC_URL }}img/notte/piccole/andromeda_laccato_tortora.jpg">
-								<div class="titolo-sezione">ZONA NOTTE</div>
-								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+								<div class="testo-sezione">
+									<div class="titolo-sezione">ZONA NOTTE</div>
+								</div>
+								<div class="vedi-small"><img class="vedi-small-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
 							</div>
 						</div>
 						<div class="span4">
 							<div class="canvas small">
 								<img alt="Cucine Classiche" src="{{ STATIC_URL }}img/snaidero/piccole/Snaidero_Idea.jpg">
-								<div class="titolo-sezione">CUCINE CLASSICHE</div>
-								<div class="vedi-small"><img alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
+								<div class="testo-sezione">
+									<div class="titolo-sezione">CUCINE CLASSICHE</div>
+								</div>
+								<div class="vedi-small"><img class="vedi-small-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
 							</div>
 						</div>
 					</div>
