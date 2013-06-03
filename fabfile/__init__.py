@@ -102,12 +102,13 @@ def prepare_server():
         run('ln -s {0}hosting/nginx/virtualhost-{1}.conf /etc/nginx/sites-enabled/{2}.conf'.format(site_root, env.environment, site_dir_name))	
 
 def prepare_deploy():
-    with lcd('/home/workspace-django/projects/ironika-calosso/calosso'):
-        local("python2 ./manage.py test main")
+#     with lcd('/home/workspace-django/projects/ironika-calosso/calosso'):
+#         local("python2 ./manage.py test main")
     with lcd('/home/workspace-django/projects/ironika-calosso'):
         local('git checkout master')
-        local('django-admin.py migrate')
         with settings(warn_only = True):
+            local('django-admin.py schemamigration main --auto')
+            local('django-admin.py migrate')
             local('git add -A && git commit')
         local('git push')
         local('git checkout {0}'.format(config[env.environment]['git']['branch_name']))
