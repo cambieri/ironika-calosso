@@ -3,15 +3,15 @@
 
 
 {# This is the page title #}
-{% block title %}calosso{% endblock %}
+{% block title %}Calosso - HOMEPAGE{% endblock %}
 
 
 {# Content of the page #}
 {% block inner_markup %}
 					<div class="row">
 						<div class="span12">
-							<div class="canvas big" onclick="window.location.href = '/cucina'">
-								<img alt="Cucine" src="{{ MEDIA_URL }}{{ homepage.galleria_principale.articolo_principale.immagine }}" width="100%">
+							<div class="canvas big" onclick="window.location.href = '/gallery/{{ principale.pk }}'">
+								<img alt="Principale" src="{{ MEDIA_URL }}{{ principale.articolo_principale.immagine }}" width="100%">
 								<div class="slogan main">{{ homepage.slogan }}</div>
 								<div class="slogan small">{{ homepage.descrizione }}</div>
 								<div class="slogan prezzo">{{ homepage.occhiello }}</div>
@@ -20,19 +20,23 @@
 						</div>
 					</div>
 					<div class="row">
+						{% for galleria in gallerie %}
 						<div class="span4">
-							<div class="canvas small">
-								<img alt="Boiserie" src="{{ STATIC_URL }}img/boiseries/piccole/elegante_boiserie_decape_su_misura.jpg">
+							<div class="canvas small" onclick="window.location.href = '/gallery/{{ galleria.pk }}'">
+								<img alt="Galleria" src="{{ MEDIA_URL }}{{ galleria.articolo_principale.miniatura }}">
 								<div class="testo-sezione">
-									<div class="slogan-sezione"><em>Madames et Monsieurs,</em></div>
-									<div class="titolo-sezione">LA BOISERIE</div>
+									<div class="slogan-sezione">{{ galleria.slogan }}</div>
+									<div class="titolo-sezione">{{ galleria.titolo }}</div>
 								</div>
 								<div class="vedi-small"><img class="vedi-small-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
 							</div>
 						</div>
+						{% endfor %}
+						
+						{% comment %}
 						<div class="span4">
 							<div class="canvas small">
-								<img alt="Zona Giorno" src="{{ STATIC_URL }}img/living/piccole/camilla_dondolo.jpg">
+								<img alt="Galleria" src="{{ STATIC_URL }}img/living/piccole/camilla_dondolo.jpg">
 								<div class="testo-sezione">
 									<div class="slogan-sezione">ZONA GIORNO<br>E SOGGIORNI</div>
 									<div class="titolo-sezione">DOIMO</div>
@@ -42,7 +46,7 @@
 						</div>
 						<div class="span4">
 							<div class="canvas small">
-								<img alt="Sedute" src="{{ STATIC_URL }}img/living/sedie/piccole/Congress_cs1246_col_back1.jpg">
+								<img alt="Galleria" src="{{ STATIC_URL }}img/living/sedie/piccole/Congress_cs1246_col_back1.jpg">
 								<div class="testo-sezione">
 									<div class="slogan-sezione">SEDUTE</div>
 									<div class="titolo-sezione">CALLIGARIS</div>
@@ -54,7 +58,7 @@
 					<div class="row">
 						<div class="span4">
 							<div class="canvas small">
-								<img alt="Tavoli e Soggiorni" src="{{ STATIC_URL }}img/living/tavoli/piccole/cs353_cs274_P128_cs8019.jpg">
+								<img alt="Galleria" src="{{ STATIC_URL }}img/living/tavoli/piccole/cs353_cs274_P128_cs8019.jpg">
 								<div class="testo-sezione">
 									<div class="slogan-sezione">TAVOLI E SOGGIORNI</div>
 									<div class="titolo-sezione">TONIN</div>
@@ -64,7 +68,7 @@
 						</div>
 						<div class="span4">
 							<div class="canvas small">
-								<img alt="Zona Notte" src="{{ STATIC_URL }}img/notte/piccole/andromeda_laccato_tortora.jpg">
+								<img alt="Galleria" src="{{ STATIC_URL }}img/notte/piccole/andromeda_laccato_tortora.jpg">
 								<div class="testo-sezione">
 									<div class="titolo-sezione">ZONA NOTTE</div>
 								</div>
@@ -73,13 +77,14 @@
 						</div>
 						<div class="span4">
 							<div class="canvas small">
-								<img alt="Cucine Classiche" src="{{ STATIC_URL }}img/snaidero/piccole/Snaidero_Idea.jpg">
+								<img alt="Galleria" src="{{ STATIC_URL }}img/snaidero/piccole/Snaidero_Idea.jpg">
 								<div class="testo-sezione">
 									<div class="titolo-sezione">CUCINE CLASSICHE</div>
 								</div>
 								<div class="vedi-small"><img class="vedi-small-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione.jpg"></div>
 							</div>
 						</div>
+						{% endcomment %}
 					</div>
 {% endblock %}
 {# end of content #}

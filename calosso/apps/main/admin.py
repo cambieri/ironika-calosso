@@ -17,23 +17,32 @@ widget_overrides = {
 
 class ArticoloInline(admin.TabularInline):
     model = Articolo
+    max_num = 18
     formfield_overrides = widget_overrides
 
 class GalleriaForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(GalleriaForm, self).__init__(*args, **kwargs)
         self.fields['articolo_principale'].queryset = Articolo.objects.filter(galleria__exact=self.instance.pk)
+        self.exclude = ['homepage']
 class GalleriaAdmin(admin.ModelAdmin):
     form = GalleriaForm
+    fields = ['menu', 'posizione', 'articolo_principale', 'slogan', 'titolo']
     inlines = [ArticoloInline, ]
     formfield_overrides = widget_overrides
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return ()
+        return ('menu', )
 
 class GalleriaInline(admin.TabularInline):
     model = Galleria
+    form = GalleriaForm
+    fields = ['posizione', 'articolo_principale', 'slogan', 'titolo']
     formfield_overrides = widget_overrides
     
 class HomepageAdmin(admin.ModelAdmin):
-    formfield_overrides = widget_overrides
+    formfield_overrides = { models.CharField: {'widget': Textarea(attrs={'cols':60, 'rows':3})}, }
     inlines = [GalleriaInline, ]
 
 admin.site.register(Homepage, HomepageAdmin)

@@ -6,7 +6,7 @@
 
 
 {# This is the page title #}
-{% block title %}calosso{% endblock %}
+{% block title %}Calosso - {{ galleria.titolo }}{% endblock %}
 
 
 {# Content of the page #}
@@ -15,16 +15,9 @@
 						<div class="span12">
 							<div id="gallery-carousel" class="carousel slide">
 								<div class="carousel-inner">
-									<div class="canvas big item active">
-										<img alt="Cucina" src="{{ MEDIA_URL }}{{ galleria.articolo_principale.immagine }}" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">{{ galleria.articolo_principale.titolo|safe }}</span>
-											<span class="gallery-descrizione">{{ galleria.articolo_principale.descrizione|safe }}</span>
-										</div>
-									</div>
 									{% for articolo in galleria.articolo_set.all %}
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ MEDIA_URL }}{{ articolo.immagine }}" width="100%">
+									<div class="canvas big item {% if forloop.counter == principale %}active{% endif %}">
+										<img alt="Articolo" src="{{ MEDIA_URL }}{{ articolo.immagine }}" width="100%">
 										<div class="gallery">
 											<span class="gallery-titolo">{{ articolo.titolo|safe }}</span>
 											<span class="gallery-descrizione">{{ articolo.descrizione|safe }}</span>
@@ -32,8 +25,6 @@
 									</div>
 									{% endfor %}
 								</div>
-								<!-- <a class="left carousel-control" href="#gallery-carousel" data-slide="prev">&lsaquo;</a> -->
-								<!-- <a class="right carousel-control" href="#gallery-carousel" data-slide="next">&rsaquo;</a> -->
 								<a class="left carousel-control" href="#gallery-carousel" data-slide="prev"><img src="{{ STATIC_URL }}img/sx.png"></a>
 								<a class="right carousel-control" href="#gallery-carousel" data-slide="next"><img src="{{ STATIC_URL }}img/dx.png"></a>
 							</div><!-- /.carousel -->
@@ -41,11 +32,9 @@
 					</div>
 					<div class="row">
 						{% for articolo in galleria.articolo_set.all %}
-							{% if forloop.counter|divisibleby:3 %}
-							{% endif %}
 						<div class="span4">
 							<div class="canvas small">
-								<img alt="Gallery" src="{{ MEDIA_URL }}{{ articolo.miniatura }}" onclick="carousel_goto({{ forloop.counter }});">
+								<img alt="Gallery" src="{{ MEDIA_URL }}{{ articolo.miniatura }}" onclick="carousel_goto({{ forloop.counter|add:"-1" }});">
 							</div>
 						</div>
 						{% endfor %}

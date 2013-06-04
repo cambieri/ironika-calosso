@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 
 ### GESTIONE CARICAMENTO E CANCELLAZIONE IMMAGINI ARTICOLI (inizio) ###
@@ -52,6 +54,8 @@ class Galleria(models.Model):
                      (2,'Riga 1 - SX'), (3,'Riga 1 - C'), (4,'Riga 1 - DX'),
                      (5,'Riga 2 - SX'), (6,'Riga 2 - C'), (7,'Riga 2 - DX'),
     )
+    homepage = models.ForeignKey(Homepage, default=1, editable=False)
+    menu = models.CharField('Voce di menù', max_length=50, blank=False)
     slogan = models.CharField('Slogan', max_length=50, blank=True)
     titolo = models.CharField('Titolo', max_length=30, blank=False)
     articolo_principale = models.OneToOneField('Articolo', blank=True, null=True, related_name='+') # nessuna backwards relation
@@ -61,7 +65,7 @@ class Galleria(models.Model):
         verbose_name_plural = "Gallerie"
         ordering = ['pk']
     def __unicode__(self):
-        return '{0} - {1}'.format(self.posizione, self.titolo)
+        return '{0} - {1}'.format(self.posizione, self.menu)
 
 class Articolo(models.Model):
     POSIZIONE_SCELTE = (
@@ -82,9 +86,9 @@ class Articolo(models.Model):
     class Meta:
         verbose_name = "ARTICOLO"
         verbose_name_plural = "Articoli"
-        ordering = ['titolo']
+        ordering = ['posizione']
     def __unicode__(self):
-        return '{0}: {1} - {2}'.format(self.galleria, self.posizione, self.titolo)
+        return '{0} - {1}'.format(self.posizione, self.titolo)
 
 pre_delete.connect(file_cleanup, sender=Articolo)
 
