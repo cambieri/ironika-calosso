@@ -1,6 +1,9 @@
 {% extends "subsite.html" %}
 {% load i18n %}
 
+{# {% load template_debug %} #}
+{# {% template_debug %} #}
+
 
 {# This is the page title #}
 {% block title %}calosso{% endblock %}
@@ -13,117 +16,21 @@
 							<div id="gallery-carousel" class="carousel slide">
 								<div class="carousel-inner">
 									<div class="canvas big item active">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/ola.jpg" width="100%">
+										<img alt="Cucina" src="{{ MEDIA_URL }}{{ galleria.articolo_principale.immagine }}" width="100%">
 										<div class="gallery">
-											<span class="gallery-titolo">Cucina Ola: 25.000 euro - design Pininfarina</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
+											<span class="gallery-titolo">{{ galleria.articolo_principale.titolo|safe }}</span>
+											<span class="gallery-descrizione">{{ galleria.articolo_principale.descrizione|safe }}</span>
 										</div>
 									</div>
+									{% for articolo in galleria.articolo_set.all %}
 									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/arcobaleno.jpg" width="100%">
+										<img alt="Cucina" src="{{ MEDIA_URL }}{{ articolo.immagine }}" width="100%">
 										<div class="gallery">
-											<span class="gallery-titolo">Cucina Arcobaleno: 15.000 euro - Novità!</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
+											<span class="gallery-titolo">{{ articolo.titolo|safe }}</span>
+											<span class="gallery-descrizione">{{ articolo.descrizione|safe }}</span>
 										</div>
 									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/brillante.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 19.500 euro - trend 2013</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/cacao.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/gioia.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/ibisco.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/luce.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/melissa.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/ola.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/sesamo.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/skyline.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/sole.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/tea.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/topazio.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/turchese.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
-									<div class="canvas big item">
-										<img alt="Cucina" src="{{ STATIC_URL }}img/cucina/way.jpg" width="100%">
-										<div class="gallery">
-											<span class="gallery-titolo">Cucina Brillante: 15.678 euro - Special Price</span>
-											<span class="gallery-descrizione">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut<br>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.<br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem</span>
-										</div>
-									</div>
+									{% endfor %}
 								</div>
 								<!-- <a class="left carousel-control" href="#gallery-carousel" data-slide="prev">&lsaquo;</a> -->
 								<!-- <a class="right carousel-control" href="#gallery-carousel" data-slide="next">&rsaquo;</a> -->
@@ -133,83 +40,15 @@
 						</div>
 					</div>
 					<div class="row">
+						{% for articolo in galleria.articolo_set.all %}
+							{% if forloop.counter|divisibleby:3 %}
+							{% endif %}
 						<div class="span4">
 							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/arcobaleno.jpg" onclick="carousel_goto(1);">
+								<img alt="Gallery" src="{{ MEDIA_URL }}{{ articolo.miniatura }}" onclick="carousel_goto({{ forloop.counter }});">
 							</div>
 						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/brillante.jpg" onclick="carousel_goto(2);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/cacao.jpg" onclick="carousel_goto(3);">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/gioia.jpg" onclick="carousel_goto(4);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/ibisco.jpg" onclick="carousel_goto(5);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/luce.jpg" onclick="carousel_goto(6);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/melissa.jpg" onclick="carousel_goto(7);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/ola.jpg" onclick="carousel_goto(8);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/sesamo.jpg" onclick="carousel_goto(9);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/skyline.jpg" onclick="carousel_goto(10);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/sole.jpg" onclick="carousel_goto(11);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/tea.jpg" onclick="carousel_goto(12);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/topazio.jpg" onclick="carousel_goto(13);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/turchese.jpg" onclick="carousel_goto(14);">
-							</div>
-						</div>
-						<div class="span4">
-							<div class="canvas small">
-								<img alt="Gallery" src="{{ STATIC_URL }}img/cucina/piccole/way.jpg" onclick="carousel_goto(15);">
-							</div>
-						</div>
+						{% endfor %}
 					</div>
 {% endblock %}
 

@@ -2,6 +2,11 @@ from django.template import loader
 import sys
 from django import http
 from django.template.context import Context
+from django.shortcuts import render
+
+from models import Galleria
+from calosso.apps.main.models import Homepage
+
 def nondefault_500_error(request, template_name='500nondefault.html'):
     """
     500 error handler for debug.
@@ -15,3 +20,15 @@ def nondefault_500_error(request, template_name='500nondefault.html'):
                     #this point in the process already
     return http.HttpResponseServerError(t.render(Context({'type':ltype,'value':lvalue,'traceback':ltraceback})))
 
+def index(request):
+    homepage = Homepage.objects.all()[:1].get()
+    args = {
+            'sezione': '',
+            'homepage': homepage,
+            }
+    return render(request, 'index.html', args)
+    
+def cucina(request):
+    galleria = Galleria.objects.get(pk__iexact = 1);
+    args = {'sezione': 'cucina', 'galleria': galleria,}
+    return render(request, 'gallery.html', args)
