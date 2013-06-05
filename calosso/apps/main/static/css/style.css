@@ -77,12 +77,12 @@ a {
 	cursor: pointer;
 }
 .canvas.big {
-	min-width: 1140px;
-	min-height: 620px;
+	/* min-width: 1140px;
+	min-height: 620px; */
 }
 .canvas.small {
-	min-width: 340px;
-	min-height: 382px;
+	/* min-width: 340px;
+	min-height: 382px; */
 }
 
 .slogan {
@@ -203,10 +203,20 @@ a {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+.contatti {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+	color: #21325E;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
 
 /* Large desktop */
 @media (min-width: 1200px) {
 	.chi_siamo { font-size: 40px; line-height: 48px; }
+	.contatti { font-size: 24px; line-height: 30px; }
 	.slogan.main { font-size: 50px; line-height: 50px; }
 	.slogan-sezione { font-size: 20px; line-height: 20px; }
 	.titolo-sezione { font-size: 40px; line-height: 44px; }

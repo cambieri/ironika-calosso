@@ -45,7 +45,7 @@ class Homepage(models.Model):
         verbose_name = "HOMEPAGE"
         verbose_name_plural = "Homepage"
     def __unicode__(self):
-        return "Gestione HOMEPAGE"
+        return u"Gestione HOMEPAGE"
 
 class Galleria(models.Model):
     POSIZIONE_SCELTE = (

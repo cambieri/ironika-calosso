@@ -1,0 +1,28 @@
+{% extends "subsite.html" %}
+{% load i18n %}
+
+
+{# This is the page title #}
+{% block title %}calosso{% endblock %}
+
+
+{# Content of the page #}
+{% block inner_markup %}
+					<div class="row">
+						<div class="span12">
+							<div class="canvas big">
+								<iframe width="100%" height="597" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=CALOSSO+-+Via+Torino,+41+-+12037+Saluzzo+(CN)&amp;aq=&amp;sll=44.646659,7.491356&amp;sspn=0.007305,0.016512&amp;ie=UTF8&amp;hq=CALOSSO+-&amp;hnear=Via+Torino,+41,+Saluzzo,+Cuneo,+Piemonte&amp;t=m&amp;cid=7651968790575006205&amp;ll=44.647926,7.489972&amp;spn=0.018227,0.048966&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.it/maps?f=q&amp;source=embed&amp;hl=it&amp;geocode=&amp;q=CALOSSO+-+Via+Torino,+41+-+12037+Saluzzo+(CN)&amp;aq=&amp;sll=44.646659,7.491356&amp;sspn=0.007305,0.016512&amp;ie=UTF8&amp;hq=CALOSSO+-&amp;hnear=Via+Torino,+41,+Saluzzo,+Cuneo,+Piemonte&amp;t=m&amp;cid=7651968790575006205&amp;ll=44.647926,7.489972&amp;spn=0.018227,0.048966&amp;z=15&amp;iwloc=A" style="color:#0000FF;text-align:left">Visualizzazione ingrandita della mappa</a></small>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span8 offset2 contatti">
+							<p>CALOSSO - Via Torino, 41 - 12037 Saluzzo (CN)
+							<br><small>P.IVA 03338890043 - R.E.A. CN282574</small></p>
+							<hr style="margin-top: 3px; margin-bottom: 6px;">
+							<p>tel. 0175 41 333 - fax: 0175 41 336
+							<br><a href="mailto:calosso@calosso.it">calosso@calosso.it</a></p> 
+						</div>
+					</div>
+{% endblock %}
+{# end of content #}
