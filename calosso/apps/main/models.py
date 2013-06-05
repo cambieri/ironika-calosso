@@ -65,7 +65,7 @@ class Galleria(models.Model):
         verbose_name_plural = "Gallerie"
         ordering = ['pk']
     def __unicode__(self):
-        return '{0} - {1}'.format(self.posizione, self.menu)
+        return u'{0} - {1}'.format(self.posizione, self.menu)
 
 class Articolo(models.Model):
     POSIZIONE_SCELTE = (
@@ -88,7 +88,7 @@ class Articolo(models.Model):
         verbose_name_plural = "Articoli"
         ordering = ['posizione']
     def __unicode__(self):
-        return '{0} - {1}'.format(self.posizione, self.titolo)
+        return u'{0} - {1}'.format(self.posizione, self.titolo)
 
 pre_delete.connect(file_cleanup, sender=Articolo)
 
