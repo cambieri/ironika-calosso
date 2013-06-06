@@ -20,6 +20,10 @@ def nondefault_500_error(request, template_name='500nondefault.html'):
                     #this point in the process already
     return http.HttpResponseServerError(t.render(Context({'type':ltype,'value':lvalue,'traceback':ltraceback})))
 
+def main_menu_context_processor(request):
+    voci_menu = Galleria.objects.values('pk', 'menu')
+    return {'voci_menu':voci_menu}
+
 def index(request):
     homepage = Homepage.objects.all()[:1].get()
     try:

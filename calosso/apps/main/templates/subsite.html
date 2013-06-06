@@ -30,13 +30,9 @@
 						<ul class="nav nav-pills" style="display: inline-block;">
 							<li {% ifequal sezione "chi_siamo" %}class="active"{% endifequal %}><a href="/chi_siamo">chi siamo</a></li>
 							<li {% ifequal sezione "contatti" %}class="active"{% endifequal %}><a href="/contatti">contatti</a></li>
-							<li {% ifequal sezione "cucina" %}class="active"{% endifequal %}><a href="/gallery/1">cucina</a></li>
-							<li {% ifequal sezione "living" %}class="active"{% endifequal %}><a href="/gallery/2">living</a></li>
-							<li {% ifequal sezione "notte" %}class="active"{% endifequal %}><a href="/gallery/3">notte</a></li>
-							<li {% ifequal sezione "outlet" %}class="active"{% endifequal %}><a href="/gallery/4">outlet</a></li>
-							<li {% ifequal sezione "boiseries" %}class="active"{% endifequal %}><a href="/gallery/5">boiseries</a></li>
-							<li {% ifequal sezione "classico" %}class="active"{% endifequal %}><a href="/gallery/6">classico</a></li>
-							<li {% ifequal sezione "snaidero" %}class="active"{% endifequal %}><a href="/gallery/7">snaidero</a></li>
+							{% for voce in voci_menu %}
+							<li {% ifequal sezione voce.menu %}class="active"{% endifequal %}><a href="/gallery/{{ voce.pk }}">{{ voce.menu }}</a></li>
+							{% endfor %}
 						</ul>
 					</div>
 				</div>

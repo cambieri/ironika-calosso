@@ -122,6 +122,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.media',
     'django.core.context_processors.debug',
+    'main.views.main_menu_context_processor',
     )
 
 
