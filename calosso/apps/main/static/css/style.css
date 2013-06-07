@@ -204,9 +204,10 @@ a {
 	margin-bottom: 20px;
 }
 .contatti {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 20px;
-	line-height: 26px;
+	/* font-family: Georgia, "Times New Roman", Times, serif; */
+	font-family: 'Wire One', sans-serif;
+	font-size: 24px;
+	line-height: 30px;
 	text-align: center;
 	color: #21325E;
 	margin-top: 20px;
@@ -216,7 +217,7 @@ a {
 /* Large desktop */
 @media (min-width: 1200px) {
 	.chi_siamo { font-size: 40px; line-height: 48px; }
-	.contatti { font-size: 24px; line-height: 30px; }
+	.contatti { font-size: 28px; line-height: 34px; }
 	.slogan.main { font-size: 50px; line-height: 50px; }
 	.slogan-sezione { font-size: 20px; line-height: 20px; }
 	.titolo-sezione { font-size: 40px; line-height: 44px; }
@@ -229,6 +230,7 @@ a {
 	.nav { font-size: 24px; }
 	.nav-tabs>li>a, .nav-pills>li>a { margin-right: 12px; }
 	.chi_siamo { font-size: 32px; line-height: 38px; }
+	.contatti { font-size: 22px; line-height: 28px; }
 	.slogan.main {top: 25%;  font-size: 40px; }
 	.slogan.small { top: 67%; font-size: 12px; }
 	.slogan.prezzo { top: 78%; font-size: 18px; }
