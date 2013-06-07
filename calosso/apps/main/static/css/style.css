@@ -246,8 +246,34 @@ a {
 @media (max-width: 767px) {
 	.nav { font-size: 22px; }
 	.nav-tabs>li>a, .nav-pills>li>a { margin-right: 8px; }
+	.chi_siamo { font-size: 24px; line-height: 30px; }
+	.contatti { font-size: 20px; line-height: 26px; }
+	.slogan.main {top: 25%;  font-size: 34px; }
+	.slogan.small { top: 67%; font-size: 12px; }
+	.slogan.prezzo { top: 78%; font-size: 16px; }
+	.vedi-big-img {	width: 150px; }
+	.slogan-sezione { font-size: 16px; line-height: 16px; }
+	.titolo-sezione { font-size: 26px; line-height: 30px; }
+	.vedi-small-img { width: 110px; }
+	.gallery {height: 60px;}
+	.gallery-titolo { padding-left: 6px; font-size: 20px; }
+	.gallery-descrizione { padding-right: 6px; font-size: 18px; line-height: 18px; }
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
+	.nav { font-size: 20px; }
+	.nav-tabs>li>a, .nav-pills>li>a { margin-right: 6px; }
+	.chi_siamo { font-size: 22px; line-height: 28px; }
+	.contatti { font-size: 20px; line-height: 26px; }
+	.slogan.main {top: 15%;  font-size:22px; line-height: 22px; }
+	.slogan.small { top: 57%; font-size: 10px; }
+	.slogan.prezzo { top: 78%; font-size: 12px; }
+	.vedi-big-img {	width: 130px; }
+	.slogan-sezione { font-size: 16px; line-height: 16px; }
+	.titolo-sezione { font-size: 26px; line-height: 30px; }
+	.vedi-small-img { width: 110px; }
+	.gallery {height: 40px;}
+	.gallery-titolo { padding-left: 4px; font-size: 14px; }
+	.gallery-descrizione { padding-right: 4px; font-size: 10px; line-height: 10px; }
 }
