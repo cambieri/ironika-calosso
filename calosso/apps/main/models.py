@@ -29,10 +29,10 @@ def file_cleanup(sender, instance, *args, **kwargs):
         if issubclass(field.__class__, FieldFile) and field.name:
             dir_path = os.path.join(settings.MEDIA_ROOT, os.path.dirname(field.name))
             field.delete(save=False)
-            if not os.listdir(dir_path):
+            if os.path.isdir(dir_path) and not os.listdir(dir_path):
                 parent_dir_path = os.path.dirname(dir_path)
                 os.rmdir(dir_path)
-                if not os.listdir(parent_dir_path):
+                if os.path.isdir(parent_dir_path) and not os.listdir(parent_dir_path):
                     os.rmdir(parent_dir_path)
 ### GESTIONE CARICAMENTO E CANCELLAZIONE IMMAGINI ARTICOLI (fine) ###
 
@@ -58,7 +58,7 @@ class Galleria(models.Model):
     menu = models.CharField('Voce di menù', max_length=50, blank=False)
     slogan = models.CharField('Slogan', max_length=50, blank=True)
     titolo = models.CharField('Titolo', max_length=30, blank=False)
-    articolo_principale = models.OneToOneField('Articolo', blank=True, null=True, related_name='+') # nessuna backwards relation
+    articolo_principale = models.OneToOneField('Articolo', on_delete=models.SET_NULL, blank=True, null=True, related_name='+') # nessuna backwards relation
     posizione = models.PositiveSmallIntegerField('Posizione in homepage', blank=False, default=0, choices=POSIZIONE_SCELTE)
     class Meta:
         verbose_name = "GALLERIA"
