@@ -21,7 +21,7 @@ def nondefault_500_error(request, template_name='500nondefault.html'):
     return http.HttpResponseServerError(t.render(Context({'type':ltype,'value':lvalue,'traceback':ltraceback})))
 
 def main_menu_context_processor(request):
-    voci_menu = Galleria.objects.filter(posizione__gt = 0).values('pk', 'menu')
+    voci_menu = Galleria.objects.exclude(menu__iexact = '(nascosta)').values('pk', 'menu')
     return {'voci_menu':voci_menu}
 
 def index(request):
