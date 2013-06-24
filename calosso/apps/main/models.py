@@ -40,6 +40,7 @@ class Homepage(models.Model):
     slogan = models.CharField('Slogan', max_length=50, blank=False)
     descrizione = models.CharField('Descrizione', max_length=300, blank=True)
     occhiello = models.CharField('Occhiello', max_length=50, blank=True)
+    immagine = models.ImageField('Immagine', blank=False, upload_to='img/home', storage=OverwriteFileStorage())
 #     galleria_principale = models.OneToOneField('Galleria')
     class Meta:
         verbose_name = "HOMEPAGE"

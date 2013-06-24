@@ -10,12 +10,12 @@
 {% block inner_markup %}
 					<div class="row">
 						<div class="span12">
-							<div class="canvas big" onclick="window.location.href = '/gallery/{{ principale.pk }}'">
-								<img alt="Principale" src="{{ MEDIA_URL }}{{ principale.articolo_principale.immagine }}" width="100%">
+							<div class="canvas big" {% if principale %}onclick="window.location.href = '/gallery/{{ principale.pk }}'"{% endif %} {% if not principale %}style="cursor: default;"{% endif %}>
+								<img alt="Principale" src="{{ MEDIA_URL }}{{ homepage.immagine }}" width="100%">
 								<div class="slogan main">{{ homepage.slogan }}</div>
 								<div class="slogan small">{{ homepage.descrizione }}</div>
 								<div class="slogan prezzo">{{ homepage.occhiello }}</div>
-								<div class="vedi-big"><img class="vedi-big-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione_big.jpg"></div>
+								{% if principale %}<div class="vedi-big"><img class="vedi-big-img" alt="Vedi la collezione" src="{{ STATIC_URL }}img/pulsanti_collezione_big.jpg"></div>{% endif %}
 							</div>
 						</div>
 					</div>

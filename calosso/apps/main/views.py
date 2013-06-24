@@ -6,6 +6,7 @@ from django.shortcuts import render, get_object_or_404
 
 from models import Galleria
 from calosso.apps.main.models import Homepage
+from django.contrib.localflavor import no
 
 def nondefault_500_error(request, template_name='500nondefault.html'):
     """
@@ -29,7 +30,7 @@ def index(request):
     try:
         principale = Galleria.objects.get(posizione__exact = 1);
     except:
-        principale = Galleria()
+        principale = None
     try:
         gallerie = Galleria.objects.filter(posizione__gt = 1).order_by('posizione');
     except:
