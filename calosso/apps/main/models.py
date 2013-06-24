@@ -64,7 +64,7 @@ class Galleria(models.Model):
     class Meta:
         verbose_name = "GALLERIA"
         verbose_name_plural = "Gallerie"
-        ordering = ['pk']
+        ordering = ['posizione', 'pk']
     def __unicode__(self):
         return u'{0} - {1}'.format(self.posizione, self.menu)
 
@@ -87,7 +87,7 @@ class Articolo(models.Model):
     class Meta:
         verbose_name = "ARTICOLO"
         verbose_name_plural = "Articoli"
-        ordering = ['posizione']
+        ordering = ['posizione', 'pk']
     def __unicode__(self):
         return u'{0} - {1}'.format(self.posizione, self.titolo)
 
