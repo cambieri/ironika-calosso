@@ -48,10 +48,12 @@ footer {
 
 .nav {
 	/* font-family: 'Wire One', sans-serif; */
-	font-size: 28px;
+	/* font-size: 28px; */
+	font-size: 20px;
 }
 .nav-tabs>li>a, .nav-pills>li>a {
-	margin-right: 16px;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 .nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus {
 	/* background-color: #21325E; */
@@ -159,7 +161,7 @@ a {
 }
 .gallery-titolo {
 	/* font-family: 'Wire One', sans-serif; */
-	font-size: 34px;;
+	font-size: 30px;;
 	color: #777;
 	text-align: left;
 	padding-left: 14px;
@@ -172,8 +174,8 @@ a {
 	display: table-cell;
 	vertical-align: middle;
 	/* font-family: 'Wire One', sans-serif; */
-	font-size: 21px;
-	line-height:21px;
+	font-size: 20px;
+	line-height:20px;
 	color: #777;
 	text-align: right;
 	white-space: pre;
@@ -196,8 +198,8 @@ a {
 
 .chi_siamo {
 	/* font-family: 'Wire One', sans-serif; */
-	font-size: 36px;
-	line-height: 42px;
+	font-size: 22px;
+	line-height: 30px;
 	color: #777;
 	text-align: justify;
 	margin-top: 20px;
@@ -206,7 +208,7 @@ a {
 .contatti {
 	/* font-family: Georgia, "Times New Roman", Times, serif; */
 	/* font-family: 'Wire One', sans-serif; */
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 30px;
 	text-align: center;
 	color: #21325E;
@@ -216,21 +218,23 @@ a {
 
 /* Large desktop */
 @media (min-width: 1200px) {
-	.chi_siamo { font-size: 40px; line-height: 48px; }
-	.contatti { font-size: 28px; line-height: 34px; }
+	.nav { font-size: 24px; }
+	.nav-tabs>li>a, .nav-pills>li>a { margin-left: 10px; margin-right: 10px; }
+	.chi_siamo { font-size: 24px; line-height: 32px; }
+	.contatti { font-size: 24px; line-height: 32px; }
 	.slogan.main { font-size: 50px; line-height: 50px; }
 	.slogan-sezione { font-size: 20px; line-height: 20px; }
 	.titolo-sezione { font-size: 40px; line-height: 44px; }
-	.gallery-titolo { padding-left: 20px; font-size: 38px; }
+	.gallery-titolo { padding-left: 20px; font-size: 34px; }
 	.gallery-descrizione { padding-right: 20px; font-size: 24px; line-height: 24px; }
 }
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-	.nav { font-size: 24px; }
-	.nav-tabs>li>a, .nav-pills>li>a { margin-right: 12px; }
-	.chi_siamo { font-size: 32px; line-height: 38px; }
-	.contatti { font-size: 22px; line-height: 28px; }
+	.nav { font-size: 14px; }
+	.nav-tabs>li>a, .nav-pills>li>a { margin-left: 3px; margin-right: 3px; padding-left: 12px; padding-right: 12px; }
+	.chi_siamo { font-size: 18px; line-height: 28px; }
+	.contatti { font-size: 18px; line-height: 28px; }
 	.slogan.main {top: 25%;  font-size: 40px; }
 	.slogan.small { top: 67%; font-size: 12px; }
 	.slogan.prezzo { top: 78%; font-size: 18px; }
@@ -239,15 +243,15 @@ a {
 	.titolo-sezione { font-size: 22px; line-height: 26px; }
 	.vedi-small-img { width: 110px; }
 	.gallery-titolo { padding-left: 10px; font-size: 24px; }
-	.gallery-descrizione { padding-right: 10px; font-size: 17px; line-height: 17px; }
+	.gallery-descrizione { padding-right: 10px; font-size: 15px; line-height: 15px; }
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-	.nav { font-size: 22px; }
-	.nav-tabs>li>a, .nav-pills>li>a { margin-right: 8px; }
-	.chi_siamo { font-size: 24px; line-height: 30px; }
-	.contatti { font-size: 20px; line-height: 26px; }
+	.nav { font-size: 13px; }
+	.nav-tabs>li>a, .nav-pills>li>a { margin-left: 1px; margin-right: 1px; padding-left: 10px; padding-right: 10px; }
+	.chi_siamo { font-size: 16px; line-height: 26px; }
+	.contatti { font-size: 16px; line-height: 26px; }
 	.slogan.main {top: 25%;  font-size: 34px; }
 	.slogan.small { top: 67%; font-size: 12px; }
 	.slogan.prezzo { top: 78%; font-size: 16px; }
@@ -257,15 +261,15 @@ a {
 	.vedi-small-img { width: 110px; }
 	.gallery {height: 60px;}
 	.gallery-titolo { padding-left: 6px; font-size: 20px; }
-	.gallery-descrizione { padding-right: 6px; font-size: 18px; line-height: 18px; }
+	.gallery-descrizione { padding-right: 6px; font-size: 12px; line-height: 12px; }
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
-	.nav { font-size: 20px; }
-	.nav-tabs>li>a, .nav-pills>li>a { margin-right: 6px; }
-	.chi_siamo { font-size: 22px; line-height: 28px; }
-	.contatti { font-size: 20px; line-height: 26px; }
+	.nav { font-size: 12px; }
+	.nav-tabs>li>a, .nav-pills>li>a { margin-left: 0px; margin-right: 0px; padding-left: 3px; padding-right: 3px; }
+	.chi_siamo { font-size: 14px; line-height: 24px; }
+	.contatti { font-size: 14px; line-height: 24px; }
 	.slogan.main {top: 15%;  font-size:22px; line-height: 22px; }
 	.slogan.small { top: 57%; font-size: 10px; }
 	.slogan.prezzo { top: 78%; font-size: 12px; }
@@ -274,6 +278,6 @@ a {
 	.titolo-sezione { font-size: 26px; line-height: 30px; }
 	.vedi-small-img { width: 110px; }
 	.gallery {height: 40px;}
-	.gallery-titolo { padding-left: 4px; font-size: 14px; }
-	.gallery-descrizione { padding-right: 4px; font-size: 10px; line-height: 10px; }
+	.gallery-titolo { padding-left: 4px; font-size: 12px; }
+	.gallery-descrizione { padding-right: 4px; font-size: 8px; line-height: 8px; }
 }
