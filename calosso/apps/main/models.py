@@ -93,3 +93,14 @@ class Articolo(models.Model):
 
 pre_delete.connect(file_cleanup, sender=Articolo)
 
+class Varie(models.Model):
+    immagine_chi_siamo = models.ImageField('Immagine sezione "chi siamo"', blank=False, upload_to='img/varie', storage=OverwriteFileStorage())
+    testo_chi_siamo = models.TextField('Testo sezione "chi siamo"', blank=False)
+    testo_contatti = models.TextField('Testo sezione "contatti"', blank=False)
+    class Meta:
+        verbose_name = "VARIE"
+        verbose_name_plural = "Varie"
+    def __unicode__(self):
+        return u"Gestioni VARIE"
+
+

@@ -5,7 +5,7 @@ from django.template.context import Context
 from django.shortcuts import render, get_object_or_404
 
 from models import Galleria
-from calosso.apps.main.models import Homepage
+from calosso.apps.main.models import Homepage, Varie
 from django.contrib.localflavor import no
 
 def nondefault_500_error(request, template_name='500nondefault.html'):
@@ -51,3 +51,12 @@ def gallery(request, gallery_id):
         principale = 0
     args = {'sezione': galleria.menu, 'galleria': galleria, 'principale': principale}
     return render(request, 'gallery.html', args)
+
+def chi_siamo(request):
+    varie = Varie.objects.all()[:1].get()
+    args = {
+            'sezione': 'chi_siamo',
+            'immagine': varie.immagine_chi_siamo,
+            'testo': varie.testo_chi_siamo,
+            }
+    return render(request, 'chi_siamo.html', args)

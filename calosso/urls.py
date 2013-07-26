@@ -8,8 +8,9 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'main.views.index'),
-    url(r'^chi_siamo$', TemplateView.as_view(template_name="chi_siamo.html", get_context_data=lambda: {'sezione': 'chi_siamo'})),
-    url(r'^contatti$', TemplateView.as_view(template_name="contatti.html", get_context_data=lambda: {'sezione': 'contatti'})),
+#     url(r'^chi_siamo$', TemplateView.as_view(template_name="chi_siamo.html", get_context_data=lambda:{'sezione': 'chi_siamo'})),
+    url(r'^chi_siamo$', 'main.views.chi_siamo'),
+    url(r'^contatti$', TemplateView.as_view(template_name="contatti.html", get_context_data=lambda:{'sezione': 'contatti'})),
     url(r'^gallery/(?P<gallery_id>\d)$', 'main.views.gallery'),
 )
 

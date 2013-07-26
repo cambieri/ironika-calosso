@@ -11,18 +11,22 @@
 					<div class="row">
 						<div class="span12">
 							<div class="canvas big">
-								<img alt="Chi siamo" src="{{ STATIC_URL }}img/chisiamo/sede.jpg" width="100%">
+								{# <img alt="Chi siamo" src="{{ STATIC_URL }}img/chisiamo/sede.jpg" width="100%"> #}
+								<img alt="Chi siamo" src="{{ MEDIA_URL }}{{ immagine }}" width="100%">
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="span8 offset2 chi_siamo">
+							{% comment %}
 							Alberto e Vilma Calosso vi aspettano per presentarvi nuove ed interessanti
 							proposte per arredare o rinnovare la vostra casa. Nella sede espositiva di Saluzzo
 							troverete soluzioni ideali, novità e suggerimenti attenti: dove il classico e il
 							moderno trovano un punto d'incontro e dove il tempo sposa il gusto. L'attenzione
 							verso i particolari unita alla qualità da sempre contraddistinguono la famiglia
 							Calosso nella scelta dei mobili come soluzione ideale per la vostra abitazione.
+							{% endcomment %}
+							{{ testo|safe }}
 						</div>
 					</div>
 {% endblock %}
