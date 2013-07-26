@@ -15,16 +15,18 @@ calosso
 
 {# Additional Meta Tags #}
 {% block meta %}
-{#    <meta property="og:title" content="calosso {% trans "Title" %}" />#}
-{#    <meta property="og:type" content="article" />#}
-{#    <meta property="og:url" content="" />#}
-{#    <meta property="og:site_name" content="calosso {% trans "Content" %}" />#}
-{#    <meta property="og:description" content="calosso {% trans "Description" %}" />#}
+{#    <meta property="og:title" content="calosso {% trans "Title" %}" /> #}
+{#    <meta property="og:type" content="article" /> #}
+{#    <meta property="og:url" content="" /> #}
+{#    <meta property="og:site_name" content="calosso {% trans "Content" %}" /> #}
+{#    <meta property="og:description" content="calosso {% trans "Description" %}" /> #}
 {% endblock %}
 
 {# CSS styles #}
 {% block css %}
-	<!-- <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'> -->
+	{% comment %}
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+	{% endcomment %}
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap-responsive.min.css">
     <!-- Fav and touch icons -->
@@ -45,7 +47,7 @@ calosso
     <script type="text/javascript" src="{{ STATIC_URL }}scripts/libs/jquery/jquery.min.js"></script>
 
     <script type="text/javascript" src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
-    <!-- <script type="text/javascript" src="{{ STATIC_URL }}bootstrap/js/bootstrap-responsive.min.js"></script> -->
+    {# <script type="text/javascript" src="{{ STATIC_URL }}bootstrap/js/bootstrap-responsive.min.js"></script> #}
 {% endblock %}
 
 {# Markup #}

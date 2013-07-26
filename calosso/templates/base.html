@@ -6,37 +6,36 @@
 <!--[if gt IE 9]><!--> <html class="no-js" lang="{{ LANGUAGE_CODE }}"> <!--<![endif]-->
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <title>
-        {% block title %}
-    {% endblock %}
-        </title>
-
-    <meta name="description" content="{% block meta-description %}{% endblock %}" />
-
-    <meta name="keywords" content="{% block meta-keywords %}{% endblock %}" />
-    <meta name="author" content="localhost" />
-
-        {% block meta %}
-    {% endblock %}
-    
-    <!--<link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico" />-->
-    <meta name="viewport" content="width=device-width" />
-
-        {% block css %}
-    {% endblock %}
-    
-        {% block js_head %}
-    {% endblock %}
-    </head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>
+		{% block title %}
+		{% endblock %}
+	</title>
+	
+	<meta name="description" content="{% block meta-description %}{% endblock %}" />
+	
+	<meta name="keywords" content="{% block meta-keywords %}{% endblock %}" />
+	<meta name="author" content="localhost" />
+	
+	{% block meta %}
+	{% endblock %}
+	   
+	<meta name="viewport" content="width=device-width" />
+	
+	{% block css %}
+	{% endblock %}
+	
+	{% block js_head %}
+	{% endblock %}
+</head>
 
 <body class="{{ LANGUAGE_CODE }}">
-        {% block markup %}
-    {% endblock %}
-    
-        {% block js %}
-    {% endblock %}
-    </body>
+	{% block markup %}
+	{% endblock %}
+
+	{% block js %}
+	{% endblock %}
+</body>
 </html>

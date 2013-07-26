@@ -18,8 +18,10 @@
 				<div class="row">
 					<div class="span1 offset11 text-right">
 						<span style="margin-right: 34px;"><a href="https://www.facebook.com/pages/CALOSSO/252805684730747?fref=ts" target="_blank"><img src="{{ STATIC_URL }}img/fb.png"></a></span>
-						<!-- <span style="margin-right: 34px;"><a href="#"><img src="{{ STATIC_URL }}img/yt.png"></a></span>
-						<span style="margin-right: 12px;"><a href="#"><img src="{{ STATIC_URL }}img/inst.png"></a></span> -->
+						{% comment %}
+						<span style="margin-right: 34px;"><a href="#"><img src="{{ STATIC_URL }}img/yt.png"></a></span>
+						<span style="margin-right: 12px;"><a href="#"><img src="{{ STATIC_URL }}img/inst.png"></a></span>
+						{% endcomment %}
 					</div>
 				</div>
 				<div class="row">
@@ -41,8 +43,10 @@
 					{% block inner_markup %}
 					{% endblock %}
 			</div>
-			<!-- <footer>
+			{% comment %}
+			<footer>
 				© 2013 [azienda] - TEL. +39 0123 456789 - P.IVA 0123456789 - Via Tal De Tali, 1 - 12345 [città] (prov) - [email]
-			</footer> -->
+			</footer>
+			{% endcomment %}
 		</div> <!-- /container -->
 {% endblock %}
