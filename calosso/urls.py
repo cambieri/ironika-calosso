@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from django.views.generic.base import TemplateView
+# from django.views.generic.base import TemplateView
 
 admin.autodiscover()
 
@@ -10,7 +10,8 @@ urlpatterns = patterns('',
     url(r'^$', 'main.views.index'),
 #     url(r'^chi_siamo$', TemplateView.as_view(template_name="chi_siamo.html", get_context_data=lambda:{'sezione': 'chi_siamo'})),
     url(r'^chi_siamo$', 'main.views.chi_siamo'),
-    url(r'^contatti$', TemplateView.as_view(template_name="contatti.html", get_context_data=lambda:{'sezione': 'contatti'})),
+#     url(r'^contatti$', TemplateView.as_view(template_name="contatti.html", get_context_data=lambda:{'sezione': 'contatti'})),
+    url(r'^contatti$', 'main.views.contatti'),
     url(r'^gallery/(?P<gallery_id>\d)$', 'main.views.gallery'),
 )
 

@@ -24,7 +24,7 @@
         {% for model in app.models %}
             <tr>
             {% if model.admin_url %}
-                <th scope="row"><a href="{{ model.admin_url }}{% if model.name|lower == 'homepage' %}1{% endif %}">{{ model.name }}</a></th>
+                <th scope="row"><a href="{{ model.admin_url }}{% if model.name|lower == 'homepage' or model.name|lower == 'varie' %}1{% endif %}">{{ model.name }}</a></th>
             {% else %}
                 <th scope="row">{{ model.name }}</th>
             {% endif %}

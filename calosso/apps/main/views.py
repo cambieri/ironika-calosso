@@ -60,3 +60,11 @@ def chi_siamo(request):
             'testo': varie.testo_chi_siamo,
             }
     return render(request, 'chi_siamo.html', args)
+
+def contatti(request):
+    varie = Varie.objects.all()[:1].get()
+    args = {
+            'sezione': 'contatti',
+            'testo': varie.testo_contatti,
+            }
+    return render(request, 'contatti.html', args)

@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.forms.models import ModelForm
 from django.forms.widgets import Textarea
 
-from models import Homepage, Galleria, Articolo
+from models import Homepage, Galleria, Articolo, Varie
 from admin_image_widget import AdminImageWidget
 
 custom_charfield_widget = {'widget': Textarea(attrs={'cols':40, 'rows':2})}
@@ -45,6 +45,10 @@ class HomepageAdmin(admin.ModelAdmin):
     formfield_overrides = { models.CharField: {'widget': Textarea(attrs={'cols':60, 'rows':3})}, }
     inlines = [GalleriaInline, ]
 
+class VarieAdmin(admin.ModelAdmin):
+    formfield_overrides = { models.ImageField: custom_image_widget, }
+    
 admin.site.register(Homepage, HomepageAdmin)
 admin.site.register(Galleria, GalleriaAdmin)
 # admin.site.register(Articolo)
+admin.site.register(Varie, VarieAdmin)
