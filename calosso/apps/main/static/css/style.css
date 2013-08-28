@@ -16,7 +16,7 @@ header {
 }
 
 footer {
-	background-color: #21325E;
+	background-color: #21325F;
 	color: #DDD;
 	text-align: center;
 	font-size: 10px;
@@ -42,7 +42,7 @@ footer>a:HOVER {
 }
 
 .blue_top {
-	background-color: #21325E;
+	background-color: #21325F;
 	height: 16px;
 }
 
@@ -62,7 +62,7 @@ footer>a:HOVER {
 	margin-right: 8px;
 }
 .nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus {
-	/* background-color: #21325E; */
+	/* background-color: #21325F; */
 	background-color: #fff;
 	color: #777;
 }
@@ -73,7 +73,7 @@ footer>a:HOVER {
 	color: #777;
 }
 a {
-	color: #21325E;
+	color: #21325F;
 }
 
 .canvas {
@@ -116,7 +116,7 @@ a {
 }
 .slogan.prezzo {
 	top: 83%;
-	color: #21325E;
+	color: #21325F;
 	font-size: 20px;
 	text-shadow: 0 0 0.2em #ddd, 0 0 0.2em #ddd
 }
@@ -195,7 +195,7 @@ a {
 .carousel-control {
 	margin-left: -26px;
 	margin-right: -26px;
-	background-color: #21325E;
+	background-color: #21325F;
 	/* font-family: 'Wire One', sans-serif; */
 	/* font-size: 66px; */
 	opacity: 1;
@@ -217,7 +217,7 @@ a {
 	font-size: 22px;
 	line-height: 30px;
 	text-align: center;
-	color: #21325E;
+	color: #21325F;
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
