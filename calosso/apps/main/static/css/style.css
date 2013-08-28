@@ -22,6 +22,12 @@ footer {
 	font-size: 10px;
 	line-height: 24px;
 }
+footer>a {
+	color: #DDD;
+}
+footer>a:HOVER {
+	color: #FFF;
+}
 
 .content {
 	/* margin-top: 10px; */
